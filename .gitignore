@@ -1,0 +1,14 @@
+node_modules
+dist
+dist-ssr
+*.local
+server/data
+server/data-migration-backups/
+server/sqlite-backups/
+# secrets (SMTP app password etc.) — never commit
+.env
+.DS_Store
+.vscode/*
+!.vscode/extensions.json
+*.tsbuildinfo
+server-restart.log

@@ -1,0 +1,41 @@
+{
+  "name": "morning-meeting-dashboard",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Morning Meeting Production Dashboard - upload Excel and visualize machine performance",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview",
+    "test:server": "node --test server/*.test.mjs",
+    "benchmark:sqlite": "node --expose-gc server/benchmark-sqlite.mjs",
+    "migrate:sqlite": "node server/migrate-json-to-sqlite.mjs",
+    "backup:sqlite": "node server/backup-sqlite.mjs",
+    "restore:sqlite": "node server/restore-sqlite-backup.mjs",
+    "serve": "node server/index.mjs",
+    "start": "npm run build && node server/index.mjs"
+  },
+  "dependencies": {
+    "@types/qrcode": "^1.5.6",
+    "better-sqlite3": "^13.0.3",
+    "express": "^5.2.1",
+    "lucide-react": "^0.469.0",
+    "nodemailer": "^9.0.3",
+    "qrcode": "^1.5.4",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "recharts": "^2.15.0",
+    "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.0.0",
+    "@types/react": "^18.3.18",
+    "@types/react-dom": "^18.3.5",
+    "@vitejs/plugin-react": "^4.3.4",
+    "tailwindcss": "^4.0.0",
+    "typescript": "^5.7.2",
+    "vite": "^6.0.7",
+    "vite-plugin-pwa": "^1.3.0"
+  }
+}
